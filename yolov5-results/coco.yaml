@@ -1,0 +1,16 @@
+path: D:\present\cmpe249-hw1\dataset  # dataset root dir
+train: D:\present\cmpe249-hw1\dataset\images\train  
+val: D:\present\cmpe249-hw1\dataset\images\test  
+test: 
+
+# Classes
+names:
+  0: Pedestrian
+  1: Truck
+  2: Car
+  3: Cyclist
+  4: DontCare
+  5: Misc
+  6: Van
+  7: Tram
+  8: Person_sitting
