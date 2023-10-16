@@ -113,7 +113,7 @@ def run(
         save_txt=False,  # save results to *.txt
         save_hybrid=False,  # save label+prediction hybrid results to *.txt
         save_conf=False,  # save confidences in --save-txt labels
-        save_json=False,  # save a COCO-JSON results file
+        save_json=True,  # save a COCO-JSON results file
         project=ROOT / 'runs/val',  # save to project/name
         name='exp',  # save to project/name
         exist_ok=False,  # existing project/name ok, do not increment
@@ -303,7 +303,7 @@ def run(
     # Save JSON
     if save_json and len(jdict):
         w = Path(weights[0] if isinstance(weights, list) else weights).stem if weights is not None else ''  # weights
-        anno_json = str(Path('../datasets/coco/annotations/instances_val2017.json'))  # annotations
+        anno_json = str(Path('../../dataset/coco-annotations/annotations_test.json'))  # annotations
         if not os.path.exists(anno_json):
             anno_json = os.path.join(data['path'], 'annotations', 'instances_val2017.json')
         pred_json = str(save_dir / f'{w}_predictions.json')  # predictions
